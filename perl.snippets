@@ -4,6 +4,17 @@ snippet dump
 snippet print
     print "${1:msg}\n";
 
+snippet warn
+    warn "${1:msg}";
+
+snippet if
+    if (${1:cond}) {
+    }
+
+snippet foreach
+    foreach (${1:list}) {
+    }
+
 snippet dd
     use Data::Dumper;
     local $Data::Dumper::Indent = 1;
@@ -26,22 +37,6 @@ snippet n
 
         bless $args, $class;
     }
-
-snippet l
-    use Class::Accessor::Lite
-
-snippet ll
-    Clas::Accessor::Lite->mk_accessors(${1:accessors});
-
-snippet t
-    #!/usr/bin/env perl -w
-    use strict;
-    use Test::More;
-
-    subtest => sub {
-    };
-
-    done_testing;
 
 snippet s
     my ($self) = @_;
